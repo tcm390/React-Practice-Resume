@@ -9,17 +9,14 @@ export default function Profile() {
                 <div className="profile-details">
                     <div className="colz">
                         <div className="colz-icon">
-                            <a href="https://www.linkedin.com/in/ting-chien-meng-b221521a6/">
-                                <i className="fa fa-facebook-square"></i>
+                            <a href="https://www.facebook.com/profile.php?id=100076498220309">
+                                <i className="fa fa-facebook-square" />
                             </a>
                             <a href="https://www.linkedin.com/in/ting-chien-meng-b221521a6/">
-                                <i className="fa fa-google-plus-square"></i>
+                                <i className="fa fa-linkedin-square" />
                             </a>
-                            <a href="https://www.linkedin.com/in/ting-chien-meng-b221521a6/">
-                                <i className="fa fa-instagram"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ting-chien-meng-b221521a6/">
-                                <i className="fa fa-twitter"></i>
+                            <a href="https://github.com/tcm390">
+                                <i className="fa fa-github" />
                             </a>
                         </div>
                     </div>

@@ -49,7 +49,7 @@ export default function ProjectCarousel(props) {
                             className="project-img"
                         />
                         <h4>kidown.io</h4>
-                        <span className="des">kidown.io is a real-time multiplayer game in which your goal is to eliminate your opponent and trying to get the high score</span>
+                        <span className="des">kidown.io is a real-time multiplayer game in which your goal is to eliminate your opponent and trying to get the highest score</span>
                         <span className="techUsed">WebSocket / Three.js / Node.js / PostgreSQL / WebGL / Blender</span>
                     </div>
                 </a>
