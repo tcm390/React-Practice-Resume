@@ -14,16 +14,15 @@ export default function AboutMe(props) {
 
 
     const SCREEN_CONSTANTS = {
-        description: "full stack",
+        description: "",
         highlights: {
             bullets: [
-                "Full Stack web and mobile development",
-                "frontend",
-                "react",
-                "restApi",
-                "backend",
-                "frontend",
-                "react",
+                "Full Stack web development",
+                "React.js",
+                "Redux for State Mnanagement",
+                "Building REST API",
+                "Three.js and WebGL",
+                "Managing database"
             ],
             heading: "Hear are a Few Highlights:"
         }
