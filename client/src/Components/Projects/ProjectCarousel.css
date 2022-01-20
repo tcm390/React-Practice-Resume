@@ -35,6 +35,7 @@ a{
     text-decoration: none !important;
 }
 .project-des-container{
+    width: 100%;
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -98,30 +99,23 @@ a{
 
 
 
-@media screen and (max-width: 810px){
-    .project-item img{
-        /* transform: scale(0.8); */
-        /* width: 90%; */
-    }
-    .project-item h4{
-        transform: scale(0.8);
-    }
-    .project-item div{
-        transform: scale(0.8);
+
+
+
+@media screen and (max-width: 1110px){
+    .project-item {
+       transform: scale(0.7);
     }
 }
 
 @media screen and (max-width: 375px){
-    .project-item{
-        transform: scale(0.7);
-    }
-    .project-item img{
-        /* transform: scale(0.6); */
-    }
-    .project-item h4{
+    .project-item {
         transform: scale(0.6);
-    }
-    .project-item div{
-        transform: scale(0.6);
-    }
+     }
+}
+
+@media screen and (max-width: 300px){
+    .project-item {
+        transform: scale(0.5);
+     }
 }
