@@ -42,9 +42,9 @@ class Scene extends Component {
     }
 
     componentDidMount() {
-
-        var loader = new THREE.TextureLoader();
-        var backgroundTexture = loader.load(bgColor);
+        this.clock = new THREE.Clock();
+        const loader = new THREE.TextureLoader();
+        const backgroundTexture = loader.load(bgColor);
         const scene = new THREE.Scene()
 
 
@@ -138,10 +138,15 @@ class Scene extends Component {
     }
 
     animate() {
+        const elapsedTime = this.clock.getElapsedTime()
         if (this.pointer && this.sphere) {
             this.sphere.rotation.z += Math.cos(Math.PI / 5) / 100;
             this.sphere.rotation.x += Math.cos(Math.PI / 5) / 100;
             this.sphere.rotation.y += Math.cos(Math.PI / 2) / 100;
+            this.pointer.children[1].position.y += Math.cos(elapsedTime * 2) / 200;
+            this.pointer.children[7].position.y += Math.cos(elapsedTime * 2) / 200;
+            this.pointer.children[8].position.y += Math.cos(elapsedTime * 2) / 200;
+            this.pointer.children[2].position.y += Math.cos(elapsedTime * 2) / 200;
         }
 
 
