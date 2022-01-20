@@ -5,6 +5,13 @@ import Animations from '../../utilities/Animation';
 import Carousel from "react-elastic-carousel";
 import shape from "../../assets/shape-bg.png";
 import './ProjectCarousel.css';
+import traderJoesImg from '../../assets/projectImage/traderjoe.png';
+import kidownImg from '../../assets/projectImage/kidown.jpg';
+import stockImg from '../../assets/projectImage/stock.png';
+import rubberImg from '../../assets/projectImage/rubber.jpg';
+import portfolioImg from '../../assets/projectImage/portfolio.png';
+import hadoopImg from '../../assets/projectImage/hadoop.png';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -31,7 +38,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://lets-go-trader-joes.com/" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/traderjoe.png"
+                            src={traderJoesImg}
                             alt=""
                             className="project-img"
                         />
@@ -47,7 +54,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://www.kidown.io" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/kidown.jpg"
+                            src={kidownImg}
                             alt=""
                             className="project-img"
                         />
@@ -63,7 +70,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://flask-stockportfolioio.herokuapp.com/" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/stock.png"
+                            src={stockImg}
                             alt=""
                             className="project-img"
                         />
@@ -77,7 +84,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://www.newgrounds.com/portal/view/814405" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/rubber.jpg"
+                            src={rubberImg}
                             alt=""
                             className="project-img"
                         />
@@ -91,7 +98,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://tcm-portfolio.netlify.app/" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/portfolio.png"
+                            src={portfolioImg}
                             alt=""
                             className="project-img"
                         />
@@ -105,7 +112,7 @@ export default function ProjectCarousel(props) {
                 <a href="https://github.com/tcm390/Hadoop_Project/blob/master/RBDA_Paper.pdf" >
                     <div className="project-item">
                         <img
-                            src="img/projectImage/hadoop.png"
+                            src={hadoopImg}
                             alt=""
                             className="project-img"
                         />
