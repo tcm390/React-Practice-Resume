@@ -14,7 +14,7 @@ export default function AboutMe(props) {
 
 
     const SCREEN_CONSTANTS = {
-        description: "Hello! My name is Joe. I'm currently looking for the opportunities in Web Development. I enjoy spending my free time increasing my knowledge of Web Development and building new and challenging projects using MERN and many Front end Technologies. I’m so excited to get hands-on experience as a software development and use my technical expertise for more large projects with higher impact.",
+        description: "Hello! My name is Joe. I'm currently looking for opportunities in Web Development. I enjoy spending my free time increasing my knowledge of Web Development and building new and challenging projects using MERN and many Front end Technologies. I’m so excited to get hands-on experience as a software developer and use my technical expertise for more large projects with higher impact.",
         highlights: {
             bullets: [
                 "Full Stack web development",
