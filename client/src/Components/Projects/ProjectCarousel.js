@@ -44,7 +44,7 @@ export default function ProjectCarousel(props) {
                         />
                         <h4>Let's Go! Trader Joe's</h4>
                         <div class="project-des-container">
-                            <span className="des">Let's Go! Trader Joe's is a review website. In this website, you can find what's the newest product in this season, haul videos and rating from true customer's reviews.  </span>
+                            <span className="des">In this website, you can find what's the newest product in this season, haul videos and rating from true customer's reviews.  </span>
                             <span className="techUsed">React JS / Redux / Node.js / Semantic UI / MongoDB / RESTful API / beautiful soup</span>
                         </div>
 
