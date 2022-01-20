@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import pointer from './assets/computers.glb';
-import bgColor from './assets/bg.jpeg';
+import bgColor from './assets/26.png';
 class Scene extends Component {
     constructor(props) {
         super(props)
@@ -20,8 +20,9 @@ class Scene extends Component {
             (gltf) => {
                 self.pointer = gltf.scene;
                 self.pointer.scale.set(.6, .6, .6);
-                self.pointer.position.y -= 0.6;
+                self.pointer.position.y -= 1;
                 self.pointer.position.z += 2;
+                // self.pointer.add(self.camera);
                 // self.pointer.castShadow = true;
 
                 self.scene.add(gltf.scene)
@@ -53,7 +54,7 @@ class Scene extends Component {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
         scene.add(ambientLight)
 
-        const pointLight = new THREE.PointLight(0xffffff, 0.5)
+        const pointLight = new THREE.PointLight(0xffffff, 1.1)
         pointLight.position.x = 2
         pointLight.position.y = 3
         pointLight.position.z = 4
@@ -64,20 +65,16 @@ class Scene extends Component {
          * Objects
          */
         // Material
-        const material = new THREE.MeshStandardMaterial()
-        material.roughness = 0.7;
+        var material = new THREE.MeshStandardMaterial({ map: backgroundTexture });
+
+
+        const geometry = new THREE.SphereGeometry(200, 32, 32);
+        this.sphere = new THREE.Mesh(geometry, material);
+        this.sphere.material.side = THREE.DoubleSide;
+        scene.add(this.sphere);
 
 
 
-        const plane = new THREE.Mesh(
-            new THREE.PlaneGeometry(10, 5),
-            material
-        )
-        plane.rotation.x = - Math.PI * 0.5
-        plane.position.y = - 0.65
-        // plane.receiveShadow = true
-
-        scene.add(plane)
 
 
 
@@ -110,14 +107,16 @@ class Scene extends Component {
         // camera.position.z = 2
         scene.add(camera)
 
+
         // Controls
         const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false;
         // controls.enableDamping = true
 
         this.scene = scene
         this.camera = camera
         this.renderer = renderer
-        scene.background = backgroundTexture;
+        // scene.background = backgroundTexture;
 
         this.mount.appendChild(this.renderer.domElement)
         this.start()
@@ -139,6 +138,13 @@ class Scene extends Component {
     }
 
     animate() {
+        if (this.pointer && this.sphere) {
+            this.sphere.rotation.z += Math.cos(Math.PI / 5) / 100;
+            this.sphere.rotation.x += Math.cos(Math.PI / 5) / 100;
+            this.sphere.rotation.y += Math.cos(Math.PI / 2) / 100;
+        }
+
+
 
         this.renderScene();
         this.frameId = window.requestAnimationFrame(this.animate);
