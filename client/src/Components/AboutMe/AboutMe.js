@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utilities/ScollService';
 import Animations from '../../utilities/Animation';
+import Scene from '../../Components/Three/threeAnimate';
 import "./AboutMe.css";
 export default function AboutMe(props) {
     let fadeInScreenHandler = (screen) => {
@@ -45,7 +46,7 @@ export default function AboutMe(props) {
                 <ScreenHeading title={'About Me'} subHeading={'Why Choose Me?'} />
                 <div className="about-me-card">
                     <div className="about-me-profile">
-
+                        <Scene />
                     </div>
                     <div className="about-me-details">
                         <span className="about-me-description">{SCREEN_CONSTANTS.description}</span>
